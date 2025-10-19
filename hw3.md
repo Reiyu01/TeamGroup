@@ -99,47 +99,39 @@ graph TD
     %% 系統整合與部署
     B4 --> F1[API Gateway 整合]
     B4 --> F2[Docker 容器化部署]
-    B4 --> F3[CI/CD 自動化]
-
+    B4 --> F3[CI與CD 自動化]
+```
 
 
 # 🎯 系統使用案例圖（Use Case Diagram）
 
 ```mermaid
-%% GitHub Markdown 內可直接渲染
-%% 說明：代表 AI Gateway 在不同角色下的主要互動與功能範圍
-%% 注意：Mermaid 不支援完整 UML 語法，但用 graph 模擬可視化效果
-
 graph TD
-    %% 使用者角色
-    U1[👩‍💼 企業員工]
-    U2[🧑‍🔧 客服與支援人員]
-    U3[👨‍💼 管理層]
-    U4[🌐 外部訪客]
+    %% 主要使用者
+    U1[企業員工]
+    U2[客服與支援人員]
+    U3[管理層]
+    U4[外部訪客]
 
-    %% 系統邏輯核心
-    G[🧠 AI Gateway 系統]
+    %% 系統核心
+    S[AI Gateway 系統]
 
-    %% 核心子系統
-    G --> A1[🔐 安全與治理層<br>(LLM護欄、脫敏、權限控管)]
-    G --> A2[🔍 智慧檢索層<br>(GraphRAG、向量搜尋、知識圖譜)]
-    G --> A3[💬 對話與協作層<br>(Semantic Router、Cache、AI Agent)]
-    G --> A4[⚙️ 系統整合與監控<br>(API Gateway、ELK、CI與CD)]
+    %% 功能模組
+    S --> F1[安全與治理]
+    S --> F2[智慧檢索]
+    S --> F3[對話與協作]
+    S --> F4[系統整合與監控]
 
-    %% 使用者與功能關聯
-    U1 --> A2
-    U1 --> A3
+    %% 使用者互動
+    U1 --> F2
+    U1 --> F3
 
-    U2 --> A2
-    U2 --> A3
+    U2 --> F2
+    U2 --> F3
 
-    U3 --> A1
-    U3 --> A4
+    U3 --> F1
+    U3 --> F4
 
-    U4 --> A3
-
-    %% 外框表示範圍
-    classDef user fill:#f6f8fa,stroke:#999,stroke-width:1px;
-    class U1,U2,U3,U4 user;
-
+    U4 --> F3
+```
 
