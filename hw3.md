@@ -107,27 +107,21 @@ graph TD
 # 🎯 系統使用案例圖（Use Case Diagram）
 
 ```mermaid
+%% 單一使用者流程 + 美觀樣式版
 graph LR
-    %% === 使用者角色 ===
-    U1([👩‍💼 企業員工])
-    U2([🧑‍🔧 客服與支援人員])
-    U3([👨‍💼 管理層])
-    U4([🌐 外部訪客])
-
-    %% === 系統主體 ===
+    %% 使用者與系統
+    U([🧑‍💻 使用者])
     S[(🧠 AI Gateway 系統)]
 
-    %% === 功能模組 ===
+    %% 功能模組
     S --> F1[🔐 安全與治理]
     S --> F2[🔍 智慧檢索]
     S --> F3[💬 對話與協作]
     S --> F4[📊 系統監控與整合]
 
-    %% === 子用例 ===
     %% 安全與治理
     F1 --> A1[資料脫敏與權限驗證]
-    F1 --> A2[越權行為防護]
-    F1 --> A3[日誌追蹤與稽核]
+    F1 --> A2[越權防護與稽核日誌]
 
     %% 智慧檢索
     F2 --> B1[GraphRAG 圖形檢索]
@@ -135,47 +129,28 @@ graph LR
     F2 --> B3[知識圖譜探索]
 
     %% 對話與協作
-    F3 --> C1[Semantic Router 語意分流]
-    F3 --> C2[Semantic Cache 快取回應]
+    F3 --> C1[Semantic Router 分流]
+    F3 --> C2[Semantic Cache 快取]
     F3 --> C3[AI Agent 任務協作]
 
     %% 系統監控與整合
     F4 --> D1[API Gateway 整合 ERP / CRM]
     F4 --> D2[成本與效能監控]
-    F4 --> D3[CI/CD 自動化部署]
+    F4 --> D3[自動化部署（CI/CD）]
 
-    %% === 使用者與功能互動 ===
-    %% 企業員工
-    U1 --> B1
-    U1 --> B2
-    U1 --> C1
-    U1 --> C2
+    %% 使用者連線
+    U --> S
 
-    %% 客服與支援人員
-    U2 --> B2
-    U2 --> B3
-    U2 --> C3
-
-    %% 管理層
-    U3 --> A1
-    U3 --> A3
-    U3 --> D2
-    U3 --> D3
-
-    %% 外部訪客
-    U4 --> C1
-    U4 --> C2
-
-    %% === 樣式設定 ===
+    %% 視覺樣式
     classDef user fill:#E8F5E9,stroke:#2E7D32,stroke-width:1px,color:#1B5E20,font-weight:bold;
     classDef system fill:#FFF3E0,stroke:#F57C00,stroke-width:1.5px,color:#E65100,font-weight:bold;
-    classDef module fill:#E3F2FD,stroke:#1565C0,stroke-width:1px,color:#0D47A1;
+    classDef module fill:#E3F2FD,stroke:#1565C0,stroke-width:1px,color:#0D47A1,font-weight:bold;
     classDef case fill:#FCE4EC,stroke:#AD1457,stroke-width:0.8px,color:#880E4F;
 
-    class U1,U2,U3,U4 user;
+    class U user;
     class S system;
     class F1,F2,F3,F4 module;
-    class A1,A2,A3,B1,B2,B3,C1,C2,C3,D1,D2,D3 case;
+    class A1,A2,B1,B2,B3,C1,C2,C3,D1,D2,D3 case;
 
 ```
 
