@@ -70,7 +70,7 @@
 - 所有開發與 API 文件應與版本控制同步。
 
 
-# 🧭 功能分解圖（Functional Decomposition Diagram, FDD）
+# 功能分解圖（Functional Decomposition Diagram, FDD）
 
 ```mermaid
 graph TD
@@ -104,20 +104,20 @@ graph TD
 ```
 
 
-# 🎯 系統使用案例圖（Use Case Diagram）
+# 系統使用案例圖（Use Case Diagram）
 
 ```mermaid
 %% 單一使用者流程 + 美觀樣式版
 graph LR
     %% 使用者與系統
-    U([🧑‍💻 使用者])
-    S[(🧠 AI Gateway 系統)]
+    U([ 使用者])
+    S[( AI Gateway 系統)]
 
     %% 功能模組
-    S --> F1[🔐 安全與治理]
-    S --> F2[🔍 智慧檢索]
-    S --> F3[💬 對話與協作]
-    S --> F4[📊 系統監控與整合]
+    S --> F1[ 安全與治理]
+    S --> F2[ 智慧檢索]
+    S --> F3[ 對話與協作]
+    S --> F4[ 系統監控與整合]
 
     %% 安全與治理
     F1 --> A1[資料脫敏與權限驗證]
