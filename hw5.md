@@ -77,8 +77,8 @@ classDiagram
     ELKMonitor ..> AIGateway : 監控
     CostTracker ..> AIGateway : 成本追蹤
 ```
-二.使用情境:
-1.使用案例一：企業員工查詢內部知識文件（RLS/ACL 控管）
+二.使用情境: \
+1.使用案例一：企業員工查詢內部知識文件（RLS/ACL 控管）\
 循序圖:
 ```mermaid
 sequenceDiagram
@@ -116,7 +116,7 @@ flowchart TD
     H --> I[回傳結果給使用者]
     I --> J[結束]
 ```
-2.使用案例二：客服人員進行 FAQ 智慧回覆
+2.使用案例二：客服人員進行 FAQ 智慧回覆 \
 循序圖:
 ```mermaid
 sequenceDiagram
@@ -148,7 +148,7 @@ flowchart TD
     G --> H
     H --> I[結束]
 ```
-3.使用案例三：管理者監控系統成本與效能
+3.使用案例三：管理者監控系統成本與效能\
 循序圖:
 ```mermaid
 sequenceDiagram
